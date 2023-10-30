@@ -1,33 +1,3 @@
-# def decode_password(password):
-#   decoded_password = []
-#   for i in password:
-#       if i == "0":
-#           decoded_password.append("3")
-#       elif i == "1":
-#           decoded_password.append("4")
-#       elif i == "2":
-#           decoded_password.append("5")
-#       elif i == "3":
-#           decoded_password.append("6")
-#       elif i == "4":
-#           decoded_password.append("7")
-#       elif i == "5":
-#           decoded_password.append("8")
-#       elif i == "6":
-#           decoded_password.append("9")
-#       elif i == "7":
-#           decoded_password.append("0")
-#       elif i == "8":
-#           decoded_password.append("1")
-#       elif i == "9":
-#           decoded_password.append("2")
-#       else:
-#           decoded_password.append(i)
-#   return ''.join(decoded_password)
-
-# password = "123434224"
-# decoded_password = decode_password(password)
-# print(decoded_password)
 
 
 user_password_to_encode = None
