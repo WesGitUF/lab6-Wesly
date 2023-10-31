@@ -1,9 +1,27 @@
+# lab 6
+# Collaborator: Mollie Brewer
+# Author: Wesly Menard
+def decode_password(stored_password):
 
+    encoded_password_int_list = []
+    for item in stored_password:
+        item = int(item)
+        if item == 7:
+            item = 0
+        if item == 8:
+            item = 1
+        if item == 9:
+            item = 2
+        else:
+            item += 3
+        encoded_password_int_list.append(str(item))
+        encoded_password = "".join(encoded_password_int_list)
+    return encoded_password
 
 user_password_to_encode = None
 
 while True:
-    print("Menu")
+    print("\nMenu")    #added an empty line
     print("-------------")
     print("1. Encode", "\n""2. Decode""\n""3. Quit")
     print(" ")
@@ -38,7 +56,9 @@ while True:
         # Examples:
         # “12345555” will become “45678888” after encoding.
         # “00009962” will become “33332295” after encoding
-        pass
+        stored_password = str(user_password_to_encode)
+        decoded_password = decode_password(stored_password)
+        print(f'Your encoded password is {decoded_password}, and the original password is {user_password_to_encode}.')
 
 
     elif user_choice == 3:
