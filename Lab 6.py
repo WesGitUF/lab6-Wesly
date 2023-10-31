@@ -6,16 +6,13 @@ def decode_password(stored_password):
     encoded_password_int_list = []
     for item in stored_password:
         item = int(item)
-        if item == 7:
-            item = 0
-        if item == 8:
-            item = 1
-        if item == 9:
-            item = 2
-        else:
-            item += 3
+        item += 3
+        if item >=10:
+            item -= 10
+
         encoded_password_int_list.append(str(item))
         encoded_password = "".join(encoded_password_int_list)
+
     return encoded_password
 
 user_password_to_encode = None
